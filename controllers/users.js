@@ -14,7 +14,7 @@ module.exports.signup = async (req, res) => {
             if (err) {
                 return next(err);
             }
-            req.flash("success", "Welcome to OpenDoor!");
+            req.flash("success", "Welcome to StaysHub!");
             res.redirect("/listings");
         })
     } catch (e) {
@@ -28,7 +28,7 @@ module.exports.renderLoginForm = (req, res) => {
 };
 
 module.exports.login = async (req, res) => {
-    req.flash("success", "Welcome back to OpenDoor");
+    req.flash("success", "Welcome back to StaysHub");
     let redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl)
 };
